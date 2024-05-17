@@ -24,9 +24,10 @@ body{
     width: 30%;
 }
 
-#iniciar_html{
+#botao_iniciar{
     margin-top: 4%;
     margin-left: 4.8%;
     float: left;
     width: 25%;
+    cursor: pointer;
 }
