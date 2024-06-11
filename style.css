@@ -24,7 +24,7 @@ body{
     width: 30%;
 }
 
-#botao_iniciar{
+.img_botao{
     margin-top: 4%;
     margin-left: 4.8%;
     float: left;
