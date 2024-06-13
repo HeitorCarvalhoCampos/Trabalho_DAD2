@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Página Home</title>
     <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="./tela_home.css">
+    <script src="./home.js" defer></script>
   </head>
   <body>
+    <header>
+      <div id="my_menu" class="menu">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#" class="links">Estrutura</a>
+        <a href="#" class="links">Tags de Texto</a>
+        <a href="#" class="links">Tags de Navegação</a>
+        <a href="#" class="links">Tags de Imagem</a>
+        <a href="#" class="links">Tags de Lista</a>
+        <a href="#" class="links">Tags de Tabela</a>
+        <a href="#" class="links">Aninhamento</a>
+    </div>
+    
+    <span class="openbtn" onclick="openNav()">&#9776;</span>
+    </header>
+
+    <br />
+    <br />
     <a href="../Tela_Inicial/tela_inicio.html"
       ><img src="../assets/exit.svg" alt="sair"
     /></a>
