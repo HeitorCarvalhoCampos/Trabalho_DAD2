@@ -2,6 +2,7 @@ body{
     background-color: #FFE81A;
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 #image_html{
@@ -24,9 +25,21 @@ body{
     width: 30%;
 }
 
-#iniciar_html{
+.img_botao{
     margin-top: 4%;
     margin-left: 4.8%;
     float: left;
-    width: 25%;
+    width: 280px;
+    cursor: pointer;
+}
+
+p{
+    color: white;
+}
+
+#botoes_iniciais{
+    width: 30%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
 }

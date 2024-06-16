@@ -1,12 +1,226 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Página Home</title>
-    <link rel="stylesheet" href="../style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="./tela_home.css">
+    <script src="./home.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div id="my_menu" class="menu">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#" class="links">Estrutura</a>
+        <a href="#" class="links">Tags de Texto</a>
+        <a href="#" class="links">Tags de Navegação</a>
+        <a href="#" class="links">Tags de Imagem</a>
+        <a href="#" class="links">Tags de Lista</a>
+        <a href="#" class="links">Tags de Tabela</a>
+        <a href="#" class="links">Aninhamento</a>
+    </div>
     
-</body>
+    <span class="openbtn" onclick="openNav()">&#9776;</span>
+    <a href="../Tela_Inicial/tela_inicio.html"><img src="../assets/exit.svg" alt="sair" id="exit"/></a>
+    </header>
+    <br>
+    <br>
+    <br>
+    <img src="../assets/titulo1.svg" alt="Montando um mundo digital com HTML"  id="titulo1">
+    <p id="texto1">Imagine que você é um mestre construtor de Lego e tem uma pilha de blocos coloridos em sua frente. Agora, em vez de construir uma torre ou um castelo, vamos construir... um site! Mas como? Bem, aqui entra a magia do HTML!</p>
+    <img src="../assets/legoOriginal.svg" alt="LegoOriginal" id="pessoa1">
+    <img src="../assets/titulo2.svg" alt="o que é html?" id="titulo2">
+    <p id="texto2">HTML, ou HyperText Markup Language, criado por Tim Berners-Lee na década de 1990, é essencial na formatação de documentos compartilhados online. Com o avanço da internet, tornou-se fundamental na criação de sites, acompanhando a evolução tecnológica ao ser combinado com CSS e JavaScript para desenvolver páginas e aplicativos web dinâmicos.</p>
+    <img src="../assets/pessoinhas2.svg" alt="Batman e menina" id="pessoinhas2">
+    <img src="../assets/titulo3.svg" alt="estrutura html" id="titulo3">
+    <div class="codigo">
+      <pre>
+        <code>
+          &lt;!DOCTYPE html&gt;
+          &lt;html lang="en"&gt;
+          &lt;head&gt;
+              &lt;meta charset="UTF-8"&gt;
+              &lt;meta name="viewport"  content="width=device-width, initial-scale=1.0"&gt;
+              &lt;title&gt;Document&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+              &lt;h1&gt;Titulo&lt;/h1&gt;
+              &lt;p&gt;Paragrafo&lt;/p&gt;
+          &lt;/body&gt;
+          &lt;/html&gt;
+        </code>
+      </pre>
+    </div>
+    <div class="lista">
+      <p><strong>!DOCTYPE html:</strong> O doctype define o tipo do arquivo, no caso html</p>
+      <p><strong>html lang = “*”:</strong> O html lang define a linguagem de leitura, para definir como português do Brasil, basta colocar após o símbolo = entre aspas “pt-br”</p>
+      <p><strong>head:</strong> Aqui é a cabeça do nosso site, onde fazemos a conexão com o JS e CSS, também podemos configurar o titulo e o ícone do nosso site</p>
+      <p><strong>body:</strong> Aqui onde botamos a mão na massa, definimos tudo aqui, como títulos, textos, links, imagens, tabelas, etc... Aqui em geral seria onde nós colocaríamos o conteúdo do nosso site</p>
+    </div>
+    <img src="../assets/titulo4.svg" alt="" id="titulo4">
+    <p id="texto4">As Tags são uasadas para informar o navegador qual a estrutura que está sendo construida, o que terá na nossa página. Elas podem indicar parágrafos, título, imagens, links, listas, tabelas etc. As tags são formadas por uma estrutura própria, iniciam com o sinal “menor que”, em seguida vem o nome daquele elemento e por fim, o sinal “maior que”.
+      Podem ser dispostas em tags que precisam de fechamento e tags que fecham sozinhas (self-closing).</p>
+    <img src="../assets/imagem4.svg " alt="" id="imagem4">
+    <div id="titulo5" class="titulo"><img src="../assets/titulo5.svg" alt=""></div>
+    <div class="comecando">
+      <p><strong>Tags de texto:</strong> são usadas quando quremos por algum texto na tela</p>
+    </div>
+    <div class="codigo">
+      <pre>
+        <code>
+          &lt;!DOCTYPE html&gt;
+          &lt;html lang="en"&gt;
+          &lt;head&gt;
+              &lt;meta charset="UTF-8"&gt;
+              &lt;meta name="viewport"  content="width=device-width, initial-scale=1.0"&gt;
+              &lt;title&gt;Document&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+          <laranja>
+            &lt;h1&gt;Titulo&lt;/h1&gt;
+            &lt;p&gt;Paragrafo&lt;/p&gt;
+          </laranja>
+          &lt;/body&gt;
+          &lt;/html&gt;
+        </code>
+      </pre>
+    </div>
+    <div class="lista">
+      <p><strong>&lt;h1&gt;</strong>: Essa tag serve para indicar um título. O numero 1 indica a  escala de 1 a 6, sendo o 1 o maior título e o 6 o menor.</p>
+      <p><strong>&lt;p&gt;</strong>: Essa tag serve para colocarmos um paragragrafo na nossa página.</p>
+    </div>
+    <br>
+    <br>
+    <br><br>
+    <div class="comecando">
+      <p><strong>Tags de navegação:</strong> São usadas para fazermos ligações internas ou externas no nosso site.</p>
+    </div>
+    <div class="codigo">
+      <pre>
+        <code>
+          &lt;!DOCTYPE html&gt;
+          &lt;html lang="en"&gt;
+          &lt;head&gt;
+              &lt;meta charset="UTF-8"&gt;
+              &lt;meta name="viewport"  content="width=device-width, initial-scale=1.0"&gt;
+              &lt;title&gt;Document&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+          <laranja>
+            &lt;nav&gt;
+              &lt;a href="#"&gt;&lt;/a&gt;
+            &lt;/nav&gt;
+          </laranja>
+          &lt;/body&gt;
+          &lt;/html&gt;
+        </code>
+      </pre>
+    </div>
+    <div class="lista">
+      <p><strong>&lt;nav&gt;</strong>: Essa tag serve para indicar que estamos fazendo uma seção para navegação.</p>
+      <p><strong>&lt;a&gt;</strong>: Essa tag serve para colocarmos um link.</p>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="comecando">
+      <p><strong>Tag de imagem:</strong> São usadas para inserirmos imagens(png, jpg ou svg) em nosso site.</p>
+    </div>
+    <div class="codigo">
+      <pre>
+        <code>
+          &lt;!DOCTYPE html&gt;
+          &lt;html lang="en"&gt;
+          &lt;head&gt;
+              &lt;meta charset="UTF-8"&gt;
+              &lt;meta name="viewport"  content="width=device-width, initial-scale=1.0"&gt;
+              &lt;title&gt;Document&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+          <laranja>
+            &lt;img src="" alt=""&gt;
+          </laranja>
+          &lt;/body&gt;
+          &lt;/html&gt;
+        </code>
+      </pre>
+    </div>
+    <br><br><br><br>
+    <div class="comecando">
+      <p><strong>Tags de lista:</strong> São usadas para usarmos listas no na nossa página. Essas listas podem ser classificadas em ordenadas ou não ordenadas</p>
+    </div>
+    <div class="codigo">
+      <pre>
+        <code>
+          &lt;!DOCTYPE html&gt;
+          &lt;html lang="en"&gt;
+          &lt;head&gt;
+              &lt;meta charset="UTF-8"&gt;
+              &lt;meta name="viewport"  content="width=device-width, initial-scale=1.0"&gt;
+              &lt;title&gt;Document&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+          <laranja>
+            &lt;ul&gt;
+              &lt;li&gt;Item 1&lt;/li&gt;
+            &lt;/ul&gt;
+          </laranja>
+          &lt;/body&gt;
+          &lt;/html&gt;
+        </code>
+      </pre>
+    </div>
+    <div class="lista">
+      <p><strong>&lt;ul&gt;</strong>:  Indica a criação de uma lista não ordenada.</p>
+      <p><strong>&lt;ol&gt;</strong>: Indica a criação de uma lista ordenada.<p>
+      <p><strong>&lt;li&gt;</strong>: Indica que estamos colocando um item na lista.</p>
+    </div>
+    <br><br><br><br>
+    <div class="comecando">
+      <p></strong>Tags de tabela:</strong> São usadas para inserirmos uma tabela no nosso html.</p>
+    </div>
+    <div class="codigo">
+      <pre>
+        <code>
+          &lt;!DOCTYPE html&gt;
+          &lt;html lang="en"&gt;
+          &lt;head&gt;
+              &lt;meta charset="UTF-8"&gt;
+              &lt;meta name="viewport"  content="width=device-width, initial-scale=1.0"&gt;
+              &lt;title&gt;Document&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+          <laranja>
+            &lt;table&gt;
+              &lt;tr&gt;
+                &lt;th&gt;Nome&lt;/th&gt;
+                &lt;th&gt;Idade&lt;/th&gt;
+                &lt;th&gt;Profissão&lt;/th&gt;
+              &lt;/tr&gt;
+            &lt;/table&gt;
+          </laranja>
+          &lt;/body&gt;
+          &lt;/html&gt;
+        </code>
+      </pre>
+    </div>
+    <div class="lista">
+      <p><strong>&lt;table&gt;</strong>: Indica a criação de uma tabela.</p>
+      <p><strong>&lt;tr&gt;</strong>: Indica a criação de uma linha na tabela.<p>
+      <p><strong>&lt;th&gt;</strong>: Indica que estamos colocando um títulos na tabela.</p>
+      <p><strong>&lt;td&gt;</strong>: Indica que estamos colocando uma célula na nossa tabela.</p>
+    </div>
+    <img src="../assets/img6.svg" alt="" id="img6">
+    <img src="../assets/titulo6.svg" alt="aninhamento" id="titulo6">
+    <p id="texto6">
+      O aninhamento, nada mais é do que uma forma de organização dentro do nosos código. Muito necessário peincipalmente para tags dentro de outras tags, como tabelas, listas e navbar.
+    </p>
+    <img src="../assets/ultimaimg.svg" alt="" id="ultima">
+    <br><br><br>
 </html>
