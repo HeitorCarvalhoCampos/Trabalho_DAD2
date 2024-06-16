@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-color: #FFE600;
+}
+.quadro{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;   
+    height: 400px;
+    gap: 10px;
+    padding: 10px;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    background-color: #F1F1F1;
+    min-width: 400px;
+    border-radius: 5px;
+}
+
+.item {
+    text-align: center;
+    align-content: center;
+    padding: 10px;
+    border-radius: 5px;
+    height: 100%;
+    background-color: green;
+}
+
+.dragging{
+    opacity: 0.5;
+}
+
+.button{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    align-content: center;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    width: 300px;
+    height: 70px;
+    background-color: grey;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+#head{
+    height: 100%;
+    width: 80%;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+#body{
+    margin-top: 10px;
+    height: 100%;
+    width: 80%;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+#html{
+    height: 30%;
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+#doc{
+    height: 30%;
+    width: 100%;
+    border: 2px solid black ;
+    border-radius: 10px;
+}
+
+#telinha{
+    display: flex;
+    flex-direction: column;
+}
+
+#telinha2{
+    display: flex;
+    flex-direction: column;
+}
+
+#parte-4{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    width: 100%;
+}
+#parte-2{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+#parte-6{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    width: 100%;
+}
+#parte-7{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+#criando{
+height: 70vh;
+width: 45vw;
+background-color: white;
+display: flex;
+justify-content: center;
+flex-direction: column;
+border-radius: 10px;
+margin-left: 10px;
+border: solid 2px black;
+}
+
+.input::placeholder{
+    color: #F1F1F1;
+}
+
+.input{
+    background-color: red;
+    border: solid 2px black;
+    border-radius: 10px;
+    align-content: center;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width: 50%;
+    padding: 20px;
+}
+
+#send{
+    border-radius: 10px;
+    margin: 0 auto;
+    width: 15%;
+    height: 5%;
+    background-color: grey;
+    text-align: center;
+    align-content: center;
+}
+
+#site{
+    height: fit-content;
+    width: 45vw;
+    min-height: 70vh;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 10px;
+    border: solid 2px black;
+}
+
+.parte-3{
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    align-content: center;
+    margin: 0 auto;
+    text-align: center;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+#linhas{
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    width: 70%;
+    height: 100%;
+}
+
+#imagem-seta{
+    width: 90%;
+}
+
+#pano{
+    background-color: purple;
+    width: 100%;
+    height: 100px;
+    z-index: 100;
+}
+
+.invisivel{
+    display: none;
+}
+
+.classUl {
+    padding-left: 30px;
+    margin: 0px;
+    width: 200px;
+}
+.classLi{
+    text-align: center;
+}
