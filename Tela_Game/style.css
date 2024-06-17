@@ -99,6 +99,34 @@ body{
     flex-direction: column;
 }
 
+#header{
+    height: 30%;
+    width: 100%;
+    border: 2px solid black ;
+    border-radius: 10px;
+}
+
+#footer{
+    height: 30%;
+    width: 100%;
+    border: 2px solid black ;
+    border-radius: 10px;
+}
+
+#nav{
+    height: 30%;
+    width: 100%;
+    border: 2px solid black ;
+    border-radius: 10px;
+}
+
+#main{
+    height: 30%;
+    width: 100%;
+    border: 2px solid black ;
+    border-radius: 10px;
+}
+
 #parte-4{
     display: flex;
     flex-direction: row;
@@ -224,4 +252,12 @@ border: solid 2px black;
 }
 .classLi{
     text-align: center;
+}
+
+#exit{
+    position: fixed;
+    width: 100px;
+    margin-top: 20px;
+    margin-left: 1130px;
+    z-index: 1;
 }
