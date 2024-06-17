@@ -143,3 +143,8 @@ body{
 #ultima{
     margin-left: 50px;
 }
+
+.texte-none{
+    text-decoration: none;
+    color: white;
+}

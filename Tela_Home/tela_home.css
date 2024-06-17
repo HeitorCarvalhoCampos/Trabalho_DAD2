@@ -53,3 +53,8 @@
 .openbtn:hover {
     background-color: #f04e4e;
 }
+
+.texte-none{
+    text-decoration: none;
+    color: white;
+}
