@@ -13,10 +13,8 @@ Você irá ver como é o funcionamento das principais tags html, e poderá botar
 ## Suporte
 
 Para suporte, contate um dos e-mail a seguir:
-ana.silva@germinare.org.br
-
-
-artur.sousa@germinare.org.br
-heitor.campos@germinare.org.br
+<br>ana.silva@germinare.org.br<br>
+artur.sousa@germinare.org.br<br>
+heitor.campos@germinare.org.br<br>
 joao.silva@germinare.org.br
 
