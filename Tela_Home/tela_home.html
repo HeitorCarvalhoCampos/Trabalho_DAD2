@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Página Home</title>
+    <link rel="stylesheet" href="./style_menu.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
@@ -13,20 +14,21 @@
   </head>
   <body>
     <header>
+      <span class="openbtn" onclick="openNav()">&#9776;</span>
+  
       <div id="my_menu" class="menu">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#" class="links">Estrutura</a>
-        <a href="#" class="links">Tags de Texto</a>
-        <a href="#" class="links">Tags de Navegação</a>
-        <a href="#" class="links">Tags de Imagem</a>
-        <a href="#" class="links">Tags de Lista</a>
-        <a href="#" class="links">Tags de Tabela</a>
-        <a href="#" class="links">Aninhamento</a>
-    </div>
-    
-    <span class="openbtn" onclick="openNav()">&#9776;</span>
-    <a href="../Tela_Inicial/tela_inicio.html"><img src="../assets/exit.svg" alt="sair" id="exit"/></a>
-    </header>
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="#estrutura" class="links">Estrutura</a>
+          <a href="#tags_texto" class="links">Tags de Texto</a>
+          <a href="#tags_navegacao" class="links">Tags de Navegação</a>
+          <a href="#tags_imagem" class="links">Tags de Imagem</a>
+          <a href="#tags_listas" class="links">Tags de Lista</a>
+          <a href="#tags_tabela" class="links">Tags de Tabela</a>
+          <a href="#tags_semantica" class="links">Tags semânticas</a>
+          <a href="#aninhamento" class="links">Aninhamento</a>
+      </div>
+      <a href="../Tela_Inicial/tela_inicio.html"><img src="../assets/exit.svg" alt="sair" id="exit"/></a>
+  </header>
     <br>
     <br>
     <br>
@@ -36,7 +38,7 @@
     <img src="../assets/titulo2.svg" alt="o que é html?" id="titulo2">
     <p id="texto2">HTML, ou HyperText Markup Language, criado por Tim Berners-Lee na década de 1990, é essencial na formatação de documentos compartilhados online. Com o avanço da internet, tornou-se fundamental na criação de sites, acompanhando a evolução tecnológica ao ser combinado com CSS e JavaScript para desenvolver páginas e aplicativos web dinâmicos.</p>
     <img src="../assets/pessoinhas2.svg" alt="Batman e menina" id="pessoinhas2">
-    <img src="../assets/titulo3.svg" alt="estrutura html" id="titulo3">
+    <div id="estrutura"><img src="../assets/titulo3.svg" alt="estrutura html" id="titulo3"></div>
     <div class="codigo">
       <a href="../Tela_Estrutura/index.html" class="text-none" style="text-decoration: none; color: white;" id="estrutura">
         <pre>
@@ -68,7 +70,7 @@
       Podem ser dispostas em tags que precisam de fechamento e tags que fecham sozinhas (self-closing).</p>
     <img src="../assets/imagem4.svg " alt="" id="imagem4">
     <div id="titulo5" class="titulo"><img src="../assets/titulo5.svg" alt=""></div>
-    <div class="comecando">
+    <div class="comecando" id="tags_texto">
       <p><strong>Tags de texto:</strong> são usadas quando quremos por algum texto na tela</p>
     </div>
     <div class="codigo">
@@ -100,7 +102,7 @@
     <br>
     <br>
     <br><br>
-    <div class="comecando">
+    <div class="comecando" id="tags_navegacao">
       <p><strong>Tags de navegação:</strong> São usadas para fazermos ligações internas ou externas no nosso site.</p>
     </div>
     <div class="codigo">
@@ -134,7 +136,7 @@
     <br>
     <br>
     <br>
-    <div class="comecando">
+    <div class="comecando" id="tags_imagem">
       <p><strong>Tag de imagem:</strong> São usadas para inserirmos imagens(png, jpg ou svg) em nosso site.</p>
     </div>
     <div class="codigo">
@@ -159,7 +161,7 @@
       </a>
     </div>
     <br><br><br><br>
-    <div class="comecando">
+    <div class="comecando" id="tags_listas">
       <p><strong>Tags de lista:</strong> São usadas para usarmos listas no na nossa página. Essas listas podem ser classificadas em ordenadas ou não ordenadas</p>
     </div>
     <div class="codigo">
@@ -191,8 +193,8 @@
       <p><strong>&lt;li&gt;</strong>: Indica que estamos colocando um item na lista.</p>
     </div>
     <br><br><br><br>
-    <div class="comecando">
-      <p></strong>Tags de tabela:</strong> São usadas para inserirmos uma tabela no nosso html.</p>
+    <div class="comecando" id="tags_tabela">
+      <p><strong>Tags de tabela:</strong> São usadas para inserirmos uma tabela no nosso html.</p>
     </div>
     <div class="codigo">
       <pre>
@@ -225,11 +227,82 @@
       <p><strong>&lt;th&gt;</strong>: Indica que estamos colocando um títulos na tabela.</p>
       <p><strong>&lt;td&gt;</strong>: Indica que estamos colocando uma célula na nossa tabela.</p>
     </div>
-    <img src="../assets/img6.svg" alt="" id="img6">
-    <img src="../assets/titulo6.svg" alt="aninhamento" id="titulo6">
-    <p id="texto6">
-      O aninhamento, nada mais é do que uma forma de organização dentro do nosos código. Muito necessário peincipalmente para tags dentro de outras tags, como tabelas, listas e navbar.
-    </p>
+    <br><br><br><br>
+    <div class="comecando" id="tags_semantica">
+      <p><strong>Tags semânticas:</strong> Tem o objetivo de descrever o significado do conteúdo presente no documento HTML, tornando mais fácil o entendimento delas.</p>
+    </div>
+    <div class="codigo">
+      <pre>
+        <code>
+          &lt;!DOCTYPE html&gt;
+          &lt;html lang="en"&gt;
+          &lt;head&gt;
+              &lt;meta charset="UTF-8"&gt;
+              &lt;meta name="viewport"  content="width=device-width, initial-scale=1.0"&gt;
+              &lt;title&gt;Document&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+          <laranja>
+            &lt;header&gt;
+              &lt;nav&gt;
+                &lt;ul&gt;
+                  &lt;li&gt;&lt;link&gt;&lt;/link&gt;&lt;/li&gt;
+
+                  &lt;li&gt;&lt;link&gt;&lt;/link&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/nav&gt;
+            &lt;/header&gt;
+
+            &lt;main&gt;
+              &lt;section&gt;
+                &lt;article&gt;
+                  &lt;h1&gt;
+                  &lt;/h1&gt;
+                &lt;/article&gt;
+                
+                &lt;aside&gt;
+                  &lt;ul&gt;
+                    &lt;li&gt;&lt;link&gt;&lt;/link&gt;&lt;/li&gt;
+
+                    &lt;li&gt;&lt;link&gt;&lt;/link&gt;&lt;/li&gt;
+                  &lt;/ul&gt;
+                &lt;/aside&gt;
+              &lt;/section&gt;
+
+              &lt;figue&gt;
+                &lt;img&gt;&lt;/img&gt;
+              &lt;/figure&gt;
+
+            &lt;/main&gt;
+
+            &lt;footer&gt;
+
+            &lt;/footer&gt;
+          </laranja>
+          &lt;/body&gt;
+          &lt;/html&gt;
+        </code>
+      </pre>
+    </div>
+    <div class="lista">
+      <p><strong>&lt;header&gt;</strong>: Utilizado para representar o cabeçalho de uma página HTML.</p>
+      <p><strong>&lt;section&gt;</strong>: Indica seções ou tópicos da página HTML.</p><p>
+      <p><strong>&lt;article&gt;</strong>: Utilizamos para declarar um conteúdo que não precisa de outro para fazer sentido.</p>
+      <p><strong>&lt;nav&gt;</strong>: Utilizamos quando precisamos representar um agrupamento de links de navegação.</p>
+      <p><strong>&lt;aside&gt;</strong>: Utilizado quando precisamos criar um conteúdo de apoio/adicional ao conteúdo principal.</p>
+      <p><strong>&lt;main&gt;</strong>: Especifica o conteúdo principal e, consequentemente, de maior relevância dentro da página.</p>
+      <p><strong>&lt;figure&gt;</strong>: É uma marcação de uso específico para a inserção de uma figura.</p>
+      <p><strong>&lt;footer&gt;</strong>: Representa um rodapé de um documento, como a área presente no final de uma página web.</p>
+      <p><strong>&lt;div&gt;</strong>: Utilizado como um contâiner genérico para agrupar blocos de conteúdo.</p>
+      <p><strong>&lt;span&gt;</strong>: Utilizado como um contâiner genérico para agrupar conteúdo em linha.</p>
+    </div>
+    <div id="aninhamento">
+      <img src="../assets/img6.svg" alt="" id="img6">
+      <img src="../assets/titulo6.svg" alt="aninhamento" id="titulo6">
+      <p id="texto6">
+        O aninhamento, nada mais é do que uma forma de organização dentro do nosos código. Muito necessário peincipalmente para tags dentro de outras tags, como tabelas, listas e navbar.
+      </p>
+    </div>
     <img src="../assets/ultimaimg.svg" alt="" id="ultima">
     <br><br><br>
 </html>
