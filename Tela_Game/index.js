@@ -148,15 +148,17 @@ function verifica() {
   console.log("Lista: " + lista.length);
   if (lista.length == 4) {
     console.log("Deu bom");
-    window.alert("Vencemo");
+    window.alert("Você conseguiu!!!");
     btn.style.background = "green";
     btn.classList.remove("button");
     btn.classList.add("invisivel");
     parte1.classList.remove("quadro");
     parte1.classList.add("invisivel");
-    parte3.classList.remove("invisivel");
-    parte3.classList.add("parte-3");
+    parte5.classList.remove("invisivel");
+    parte5.classList.add("quadro");
     btn.onclick = null;
+    btn2.classList.remove("invisivel")
+    btn2.classList.add("button");
     lista = [];
   } else {
     window.alert("Perdeuuuu, tente dnv");
@@ -234,6 +236,15 @@ function enviarTag() {
         enviarValue();
       };
     }
+
+    if (tags_link.includes(input.value)) {
+      value_tag.classList.remove("invisivel");
+      value_tag.classList.add("input");
+      value_tag.type = "text";
+      btn_send.onclick = function () {
+        enviarValue();
+      };
+    }
   }
   else{
     window.alert("Tag não reconhecida")
@@ -253,6 +264,18 @@ function enviarValueComplementar() {
 }
 function enviarValue() {
   console.log("Entrei na EnviarValue");
+  if (tags_link.includes(input.value)) {
+    const valor = document.createElement(input.value);
+    valor.textContent = "Link";
+    valor.href = value_tag.value;
+    valor.target = "_blank"
+    site.appendChild(valor);
+    value_tag.classList.add("invisivel");
+    value_tag.classList.remove("input");
+    btn_send.onclick = function () {
+      enviarTag();
+    }
+  }
   if (tags_img.includes(input.value)) {
     var file = value_tag.files[0];
 
@@ -307,14 +330,6 @@ function enviarValue() {
     };
     input.value = "";
     value_tag.value = "";
-  }
-  if (input.value == "ul" || input.value == "ol" && complementary_tag.value != "li") {
-    while (input.value == "ul" || input.value == "ol" && complementary_tag.value != "li") {
-      window.alert("Você precisar criar um li");
-      btn_send.onclick = function () {
-        enviarValue();
-      };
-    }
   }
   if (input.value == "ul" || input.value == "ol" && complementary_tag.value == "li") {
     const valorTags = document.createElement(input.value);
@@ -408,7 +423,7 @@ function getNewPosition(zone, posY) {
         ) {
           btn2.style.background = "red";
           btn2.onclick = function () {
-            verifica();
+            verifica2();
           };
         } else {
           btn2.style.background = "grey";
@@ -432,7 +447,7 @@ function getNewPosition(zone, posY) {
           ) {
             btn2.style.background = "red";
             btn2.onclick = function () {
-              verifica();
+              verifica2();
             };
           } else {
             btn2.style.background = "grey";
@@ -453,7 +468,7 @@ function getNewPosition(zone, posY) {
   });
 
 
-  function verifica() {
+  function verifica2() {
     console.log("Cliquei");
     let lista = [];
     if (header.textContent.includes("HEADER")) {
@@ -471,7 +486,7 @@ function getNewPosition(zone, posY) {
     console.log("Lista: " + lista.length);
     if (lista.length == 4) {
       console.log("Deu bom");
-      window.alert("Vencemo");
+      window.alert("Você conseguiu!!!");
       btn2.style.background = "green";
       btn2.classList.remove("button");
       btn2.classList.add("invisivel");
@@ -479,7 +494,7 @@ function getNewPosition(zone, posY) {
       parte5.classList.add("invisivel");
       parte3.classList.remove("invisivel");
       parte3.classList.add("parte-3");
-      btn.onclick = null;
+      btn2.onclick = null;
       lista = [];
     } else {
       window.alert("Perdeuuuu, tente dnv");

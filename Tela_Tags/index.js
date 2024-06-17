@@ -47,7 +47,7 @@ if (param == 1) {
 //fase 4
 const list4 = [];
 function verificaFase4() {
-  console.log("entrei na funcão");
+  console.log("entrei na função");
   console.log("Tamanho lista: " + list4.length);
   if (list4.length < 2) {
     console.log("entrei no if");
@@ -56,114 +56,88 @@ function verificaFase4() {
       if (list4.indexOf(input.value) > -1) {
         window.alert("Não pode repetir tag!!!");
       } else {
-        list4.push(input.value);
         complementary_tag.classList.remove("invisivel");
         complementary_tag.classList.add("input");
         complementary_tag.type = "text";
-        console.log("lista 4" + list4);
+        console.log("lista 4: " + list4);
         btn_send.onclick = function () {
-            enviarValueComplementar();
-          };
+          enviarValueComplementar();
+        };
       }
     } else {
       window.alert("Você deve criar uma lista!!!");
     }
   } else {
     window.alert("Você conseguiu!!!");
-  }
-}
-function enviarValuefase4() {
-  if (list4.length == 2) {
-    if (input.value == "ul") {
-      complementary_tag.classList.remove("invisivel");
-      complementary_tag.classList.add("input");
-      complementary_tag.type = "text";
-      btn_send.onclick = function () {
-        enviarValueComplementar();
-      };
-    }
-
-    if (input.value == "ol") {
-      complementary_tag.classList.remove("invisivel");
-      complementary_tag.classList.add("input");
-      complementary_tag.type = "text";
-      btn_send.onclick = function () {
-        enviarValueComplementar();
-      };
-    }
-    if (input.value == "li") {
-      console.log("Valor site: " + site.innerHTML);
-      console.log("Valor comparação: " + site.innerHTML.includes("<ol"));
-      if (site.innerHTML.includes("<ul") && site.innerHTML.includes("<ol")) {
-        value_tag.classList.remove("invisivel");
-        value_tag.classList.add("input");
-        complementary_tag.type = "text";
-        btn_send.onclick = function () {
-          enviarValue();
-        };
-      }
-      if (site.innerHTML.includes("<ul") || site.innerHTML.includes("<ol")) {
-        value_tag.classList.remove("invisivel");
-        value_tag.classList.add("input");
-        value_tag.type = "text";
-        btn_send.onclick = function () {
-          enviarValue();
-        };
-      } else {
-        window.alert("Você deve criar uma ul primeiro.");
-      }
-    }
-    input.classList.remove("input");
-    input.classList.add("invisivel");
+    complementary_tag.classList.add("invisivel");
+    complementary_tag.classList.remove("input");
     btn_send.classList.remove("button");
     btn_send.classList.add("invisivel");
-    exitLink.classList.remove("invisivel");
-    exitLink.parentElement.href = "../Tela_Home/tela_home.html#lista";
+  }
+}
+
+function enviarValuefase4(){
+  if (input.value == "ul" || input.value == "ol" && complementary_tag.value == "li") {
+    if(list4.indexOf(input.value)>-1){
+      window.alert("Tem que ser duas listas diferentes!!!")
+    }
+    list4.push(input.value)
+    if(list4.length == 2){
+    const valorTags = document.createElement(input.value);
+    valorTags.classList.add("classUl");
+    const ValueComplementar = document.createElement(complementary_tag.value);
+    ValueComplementar.textContent = value_tag.value;
+    ValueComplementar.classList.add("classLi");
+    valorTags.appendChild(ValueComplementar);
+    site.appendChild(valorTags);
     value_tag.classList.add("invisivel");
     value_tag.classList.remove("input");
+    complementary_tag.classList.remove("input")
+    complementary_tag.classList.add("invisivel")
     input.value = "";
-    value_tag.value = "";
-    window.alert("Você conseguiu!!!");
-  } else {
-    if (input.value == "ul") {
-      list4.push("ul");
-      complementary_tag.classList.remove("invisivel");
-      complementary_tag.classList.add("input");
-      complementary_tag.type = "text";
-      btn_send.onclick = function () {
-        enviarValueComplementar();
-      };
-    } else if (input.value == "ol") {
-      list4.push("ol");
-      complementary_tag.classList.remove("invisivel");
-      complementary_tag.classList.add("input");
-      complementary_tag.type = "text";
-      btn_send.onclick = function () {
-        enviarValueComplementar();
-      };
-    } else if (input.value == "li") {
-      console.log("Valor site: " + site.innerHTML);
-      console.log("Valor comparação: " + site.innerHTML.includes("<ol"));
-      if (site.innerHTML.includes("<ul") && site.innerHTML.includes("<ol")) {
-        value_tag.classList.remove("invisivel");
-        value_tag.classList.add("input");
-        value_tag.type = "text";
-        btn_send.onclick = function () {
-          enviarValue();
-        };
-      }
-      if (site.innerHTML.includes("<ul") || site.innerHTML.includes("<ol")) {
-        value_tag.classList.remove("invisivel");
-        value_tag.classList.add("input");
-        value_tag.type = "text";
-        btn_send.onclick = function () {
-          enviarValue();
-        };
-      } else {
-        window.alert("Você deve criar uma ul primeiro.");
-      }
-    }
+    value_tag.value = ""
+    complementary_tag.value = ""
+    btn_send.onclick = function () {
+      enviarTag();
+    };
+    window.alert("Você conseguiu!!!")
+    input.classList.remove("input")
+    input.classList.add("invisivel")
+    btn_send.classList.add("invisivel")
+    btn_send.classList.remove("button")
+    exitLink.classList.remove("invisivel");
+    exitLink.parentElement.href = "../Tela_Home/tela_home.html#lista";
   }
+  const valorTags = document.createElement(input.value);
+  valorTags.classList.add("classUl");
+  const ValueComplementar = document.createElement(complementary_tag.value);
+  ValueComplementar.textContent = value_tag.value;
+  ValueComplementar.classList.add("classLi");
+  valorTags.appendChild(ValueComplementar);
+  site.appendChild(valorTags);
+  value_tag.classList.add("invisivel");
+  value_tag.classList.remove("input");
+  complementary_tag.classList.remove("input")
+  complementary_tag.classList.add("invisivel")
+  input.value = "";
+  value_tag.value = ""
+  complementary_tag.value = ""
+  btn_send.onclick = function () {
+    enviarTag();
+  };
+}
+}
+
+function resetInputs() {
+  input.value = "";
+  complementary_tag.value = "";
+  value_tag.value = "";
+  input.classList.remove("input");
+  input.classList.add("invisivel");
+  exitLink.classList.remove("invisivel");
+  exitLink.parentElement.href = "../Tela_Home/tela_home.html#lista";
+  value_tag.classList.add("invisivel");
+  value_tag.classList.remove("input");
 }
 
 btn_send.onclick = function () {
@@ -277,6 +251,7 @@ function enviarValuefase2() {
       const valor = document.createElement(input.value);
       valor.textContent = "Link";
       valor.href = value_tag.value;
+      valor.target = "_blank"
       site.appendChild(valor);
       value_tag.classList.add("invisivel");
       value_tag.classList.remove("input");
@@ -381,7 +356,7 @@ function enviarTag() {
     verificaFase3();
   } else if (param == 4) {
     verificaFase4();
-  } 
+  }
 }
 function enviarValue() {
   if (param == 1) {
@@ -396,116 +371,14 @@ function enviarValue() {
 }
 
 function enviarValueComplementar() {
-    if (input.value == "ul" || input.value == "ol") {
-      if (complementary_tag.value == "li") {
-        value_tag.classList.remove("invisivel");
-        value_tag.classList.add("input");
-        value_tag.type = "text"
-        btn_send.onclick = function () {
-          enviarValue();
-        };
-      }
+  if (input.value == "ul" || input.value == "ol") {
+    if (complementary_tag.value == "li") {
+      value_tag.classList.remove("invisivel");
+      value_tag.classList.add("input");
+      value_tag.type = "text";
+      btn_send.onclick = function () {
+        enviarValue();
+      };
     }
   }
-// else if (tags_img.includes(input.value)) {
-//     var file = value_tag.files[0];
-
-//     if (tags_img.includes(input.value)) {
-//       var reader = new FileReader();
-//       console.log("Entrei no if");
-//       reader.onload = function (e) {
-//         // Criar o elemento <img>
-//         const valorImg = document.createElement("img");
-
-//         // Definir os atributos 'src' e 'alt'
-//         valorImg.src = e.target.result; // URL temporária da imagem
-//         valorImg.alt = "Descrição da imagem"; // Descrição da imagem
-//         // Adicionar a imagem ao DOM
-//         valorImg.style.width = "40%";
-//         site.appendChild(valorImg);
-//       };
-
-//       reader.readAsDataURL(file);
-//       console.log("Valor imagem: " + value_tag.value);
-//     }
-//     value_tag.classList.add("invisivel");
-//     value_tag.classList.remove("input");
-//     btn_send.onclick = function () {
-//       enviarTag();
-//     };
-//     input.value = "";
-//     value_tag.value = "";
-//   }
-
-//   else if (tags_text.includes(input.value)) {
-//     const valor = document.createElement(input.value);
-//     valor.textContent = value_tag.value;
-//     site.appendChild(valor);
-//     value_tag.classList.add("invisivel");
-//     value_tag.classList.remove("input");
-//     btn_send.onclick = function () {
-//       enviarTag();
-//     };
-//     input.value = "";
-//     value_tag.value = "";
-//   }
-
-//   else if (input.value == "li") {
-//     const valor = document.createElement(input.value);
-//     valor.textContent = value_tag.value;
-//     site.appendChild(valor);
-//     value_tag.classList.add("invisivel");
-//     value_tag.classList.remove("input");
-//     btn_send.onclick = function () {
-//       enviarTag();
-//     };
-//     input.value = "";
-//     value_tag.value = "";
-//   }
-//   else if (
-//     input.value == "ul" ||
-//     (input.value == "ol" && complementary_tag.value != "li")
-//   ) {
-//     while (
-//       input.value == "ul" ||
-//       (input.value == "ol" && complementary_tag.value != "li")
-//     ) {
-//       window.alert("Você precisar criar um li");
-//       btn_send.onclick = function () {
-//         enviarValue();
-//       };
-//     }
-//   }
-//   else if (
-//     input.value == "ul" ||
-//     (input.value == "ol" && complementary_tag.value == "li")
-//   ) {
-//     const valorTags = document.createElement(input.value);
-//     valorTags.classList.add("classUl");
-//     const ValueComplementar = document.createElement(complementary_tag.value);
-//     ValueComplementar.textContent = value_tag.value;
-//     ValueComplementar.classList.add("classLi");
-//     valorTags.appendChild(ValueComplementar);
-//     site.appendChild(valorTags);
-//     value_tag.classList.add("invisivel");
-//     value_tag.classList.remove("input");
-//     complementary_tag.classList.remove("input");
-//     complementary_tag.classList.add("invisivel");
-//     input.value = "";
-//     value_tag.value = "";
-//     complementary_tag.value = "";
-//     btn_send.onclick = function () {
-//       enviarTag();
-//     };
-//   } else {
-//     const valor = document.createElement(input.value);
-//     valor.textContent = value_tag.value;
-//     site.appendChild(valor);
-//     value_tag.classList.add("invisivel");
-//     value_tag.classList.remove("input");
-//     btn_send.onclick = function () {
-//       enviarTag();
-//     };
-//     input.value = "";
-//     value_tag.value = "";
-//   }
+}

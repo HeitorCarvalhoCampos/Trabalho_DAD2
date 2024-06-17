@@ -1,4 +1,3 @@
-//tags não semântica
 const home2 = document.getElementById("home2");
 const header = document.getElementById("header");
 const footer = document.getElementById("footer");
@@ -6,7 +5,6 @@ const main = document.getElementById("main");
 const nav = document.getElementById("nav");
 const btn2 = document.getElementById("btn2");
 const parte5 = document.getElementById("parte-5");
-const parte3 = document.getElementById("parte3");
 
 function getNewPosition(zone, posY) {
     const cards = zone.querySelectorAll(".item:not(.dragging)");
@@ -56,7 +54,7 @@ function getNewPosition(zone, posY) {
         ) {
           btn2.style.background = "red";
           btn2.onclick = function () {
-            verifica();
+            verifica2();
           };
         } else {
           btn2.style.background = "grey";
@@ -80,7 +78,7 @@ function getNewPosition(zone, posY) {
           ) {
             btn2.style.background = "red";
             btn2.onclick = function () {
-              verifica();
+              verifica2();
             };
           } else {
             btn2.style.background = "grey";
@@ -101,7 +99,7 @@ function getNewPosition(zone, posY) {
   });
 
 
-  function verifica() {
+  function verifica2() {
     console.log("Cliquei");
     let lista = [];
     if (header.textContent.includes("HEADER")) {
@@ -119,18 +117,12 @@ function getNewPosition(zone, posY) {
     console.log("Lista: " + lista.length);
     if (lista.length == 4) {
       console.log("Deu bom");
-      window.alert("Vencemo");
+      window.alert("Você conseguiu!!!");
       btn2.style.background = "green";
       btn2.classList.remove("button");
       btn2.classList.add("invisivel");
-      parte5.classList.remove("quadro");
-      parte5.classList.add("invisivel");
-      parte3.classList.remove("invisivel");
-      parte3.classList.add("parte-3");
-      btn.onclick = null;
       lista = [];
     } else {
       window.alert("Perdeuuuu, tente dnv");
     }
   }
-  
