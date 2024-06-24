@@ -3,7 +3,7 @@ body {
 }
 
 .menu {
-    height: fit-content;
+    height: 600px;
     width: 0; /* Largura inicial 0 para estar fechado ao carregar */
     position: fixed;
     z-index: 1;
@@ -21,12 +21,14 @@ body {
 }
 
 .menu a {
+    margin: 12px;
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 24px;
     color: white;
     display: block;
     transition: 0.3s;
+    font-family: 'League Spartan';
 }
 
 .links {
@@ -52,11 +54,19 @@ body {
     font-size: 40px;
     cursor: pointer;
     color: white;
-    padding: 10px 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
     border: none;
 }
 
 .openbtn:hover {
     background-color: #f04e4e;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
-
