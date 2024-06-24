@@ -2,6 +2,7 @@ body{
     background-color: #FFE81A;
     margin: 0;
     overflow-x: hidden;
+    color: black;
 }
 
 #exit{
@@ -14,22 +15,22 @@ body{
 
 #titulo1{
     margin-top: 10px;
-    margin-left: 82px;
+    /* margin-left: 82px; */
 }
 
 #texto1{
-    margin-top: 10px;
-    margin-left: 190px;
+    margin-top: 20px;
+    margin-left: 90px;
     font-size: 30px;
     width: 625px;
-    color: white;
+    color: black;
     font-family: 'League Spartan';
 }
 
 #pessoa1{
     position: absolute;
-    margin-top: -190px;
-    margin-left: 860px;
+    margin-top: -210px;
+    margin-left: 970px;
 }
 
 
@@ -39,10 +40,10 @@ body{
 }
 
 #texto2{
-    margin-left: 420px;
+    margin-left: 480px;
     font-size: 30px;
     width: 675px;
-    color: white;
+    color: black;
     font-family: 'League Spartan';
     margin-top: -10px;
     text-align: right;
@@ -54,7 +55,7 @@ body{
 }
 
 #titulo3{
-    margin-left: 50px;
+    margin-left: 70px;
     margin-top: 30px;
 }
 
@@ -68,11 +69,11 @@ body{
     color: white;
     display: inline-block;
     width: 1000px;
-    margin-left: 100px;
+    margin-left: 70px;
 }
 
 #titulo4{
-    margin-left: 320px;
+    margin-left: 360px;
     margin-top: 20px;
 }
 
@@ -80,7 +81,7 @@ body{
     margin-left: 340px;
     font-size: 30px;
     width: 800px;
-    color: white;
+    color: black;
     font-family: 'League Spartan';
     margin-top: 10px;
     text-align: right;
@@ -122,7 +123,7 @@ body{
 #img6{
     margin-top: 30px;
     margin-left: 200px;
-}
+}   
 
 #titulo6{
     position: absolute;
@@ -135,7 +136,7 @@ body{
     margin-left: 600px;
     font-size: 30px;
     width: 550px;
-    color: white;
+    color: black;
     font-family: 'League Spartan';
     margin-top: -250px;
     text-align: right;
@@ -146,7 +147,7 @@ body{
 }
 .texte-none{
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 
