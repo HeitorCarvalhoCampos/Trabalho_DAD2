@@ -51,7 +51,7 @@ function getNewPosition(zone, posY) {
           doc.textContent.trim() &&
           head.textContent.trim()
         ) {
-          btn.style.background = "red";
+          btn.style.background = "#F2E205";
           btn.onclick = function () {
             verifica();
           };

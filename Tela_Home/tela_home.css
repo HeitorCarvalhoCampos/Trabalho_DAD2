@@ -1,13 +1,13 @@
 body{
-    background-color: #FFE81A;
+    background-color: #F21628;
     margin: 0;
     overflow-x: hidden;
-    color: black;
+    color: white;
 }
 
 #exit{
     position: fixed;
-    width: 100px;
+    width: 70px;
     margin-top: 20px;
     margin-left: 1130px;
     z-index: 1;
@@ -23,7 +23,7 @@ body{
     margin-left: 90px;
     font-size: 30px;
     width: 625px;
-    color: black;
+    color: white;
     font-family: 'League Spartan';
 }
 
@@ -43,7 +43,7 @@ body{
     margin-left: 480px;
     font-size: 30px;
     width: 675px;
-    color: black;
+    color: white;
     font-family: 'League Spartan';
     margin-top: -10px;
     text-align: right;
@@ -81,7 +81,7 @@ body{
     margin-left: 340px;
     font-size: 30px;
     width: 800px;
-    color: black;
+    color: white;
     font-family: 'League Spartan';
     margin-top: 10px;
     text-align: right;
@@ -136,7 +136,7 @@ body{
     margin-left: 600px;
     font-size: 30px;
     width: 550px;
-    color: black;
+    color: white;
     font-family: 'League Spartan';
     margin-top: -250px;
     text-align: right;
@@ -147,7 +147,7 @@ body{
 }
 .texte-none{
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 

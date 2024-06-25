@@ -9,7 +9,7 @@ body {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: red;
+    background-color: #F2E205;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 55px;
@@ -37,7 +37,7 @@ body {
 }
 
 .links:hover {
-    color:black;
+    color:white;
     background-color: white;
 }
 
@@ -62,7 +62,7 @@ body {
 }
 
 .openbtn:hover {
-    background-color: #f04e4e;
+    background-color: #F2E205;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     padding-top: 5px;
