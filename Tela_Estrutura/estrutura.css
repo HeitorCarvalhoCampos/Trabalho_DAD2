@@ -1,0 +1,21 @@
+#container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width:100vw; /* 100% da altura da viewport */
+}
+
+.p{
+    text-align: center;
+    margin-top: 15px;
+    font-size: large;
+    color: white;
+}
+
+#exit{
+    position: fixed;
+    width: 60px;
+    margin-top: 10px;
+    z-index: 1;
+    margin-left: 1150px;
+}

@@ -6,6 +6,9 @@ const doc = document.getElementById("doc");
 const btn = document.getElementById("btn");
 const modal = document.getElementById("modal")
 const modalError = document.getElementById("modalError")
+const enunciado = document.getElementById("enunciado");
+const enunciado2 = document.getElementById("enunciado2");
+const modalEnunciado = document.getElementById("modalEnunciado")
 
 function getNewPosition(zone, posY) {
     const cards = zone.querySelectorAll(".item:not(.dragging)");
@@ -154,4 +157,9 @@ function getNewPosition(zone, posY) {
   function fechaModal(){
     modalError.classList.add("invisivel")
     modalError.classList.remove("overlay")   
+  }
+
+  function fechaModalEnunciado(){
+    modalEnunciado.classList.add("invisivel")
+    modalEnunciado.classList.remove("overlay") 
   }

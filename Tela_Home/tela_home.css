@@ -7,9 +7,9 @@ body{
 
 #exit{
     position: fixed;
-    width: 70px;
+    width: 50px;
     margin-top: 20px;
-    margin-left: 1130px;
+    margin-left: 1150px;
     z-index: 1;
 }
 
@@ -106,7 +106,7 @@ body{
 }
 
 .codigo{
-    background-color: #4C471E;
+    background-color:#272626;
     color: white;
     border-radius: 28px;
     font-weight: bold;

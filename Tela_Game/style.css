@@ -192,11 +192,12 @@ border: solid 2px black;
 }
 
 #send{
+    cursor: pointer;
     border-radius: 10px;
     margin: 0 auto;
-    width: 15%;
-    height: 5%;
-    background-color: grey;
+    width: 25%;
+    height: 7%;
+    background-color: green;
     text-align: center;
     align-content: center;
 }
@@ -300,7 +301,7 @@ border: solid 2px black;
     color: white;
     font-size: 20px;
     text-decoration: none;
-    width: 150px;
+    width: 200px;
     height: 50px;
     border-radius: 4px;
     background-color: green;
@@ -313,7 +314,7 @@ border: solid 2px black;
     color: white;
     font-size: 20px;
     text-decoration: none;
-    width: 150px;
+    width: 200px;
     height: 50px;
     border-radius: 4px;
     background-color: #F21628;

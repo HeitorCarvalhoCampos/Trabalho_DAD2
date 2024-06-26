@@ -3,14 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estrutura.css">
     <link rel="stylesheet" href="../Tela_Game/style.css">
     <script src="index.js" defer></script>
     <link rel="icon" href="../assets/brand-lego.svg" type="image/svg">
     <title>Estrutura</title>
+    <style>
+  #container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width:100vw; /* 100% da altura da viewport */
+}
+
+pre{
+    text-align: center;
+    margin-top: 15px;
+    font-size: large;
+    color: white;
+}
+
+#exit{
+    position: fixed;
+    width: 60px;
+    margin-top: 10px;
+    z-index: 1;
+    margin-left: 1150px;
+}
+
+    </style>
 </head>
 <body>
+  <div id="container">
     <a href="../Tela_Home/tela_home.html#estrutura"><img src="../assets/exit.svg" alt="sair" id="exit"/></a>
-
+      <pre id="enunciado">Você deve colocar as peças na ordem correta!</pre>
+    </div>
     <div id="parte-1" class="quadro">
         <div class="column" id="home">
           <div class="item" draggable="true">HTML</div>
@@ -42,6 +69,14 @@
             <h1>Parabéns, você conseguiu!!!</h1>
             <a href="../Tela_Home/tela_home.html#estrutura" class="sairPag">Continuar</a>
         </div>
+    </div>
+
+    <div class="overlay" id="modalEnunciado">
+      <div class="modal">
+          <h1>Hora de praticar!</h1>
+          <h2 id="enunciado2">Você deve colocar as peças na ordem correta!</h2>
+          <a href="#" class="sairPag" onclick="fechaModalEnunciado()">Continuar</a>
+      </div>
     </div>
 
     <div class="invisivel" id="modalError">
