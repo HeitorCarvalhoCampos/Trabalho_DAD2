@@ -37,7 +37,7 @@ body {
 }
 
 .links:hover {
-    color:white;
+    color:black;
     background-color: white;
 }
 
@@ -62,7 +62,6 @@ body {
 }
 
 .openbtn:hover {
-    color: black;
     background-color: #F2E205;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
