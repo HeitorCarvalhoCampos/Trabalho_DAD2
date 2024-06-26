@@ -188,3 +188,13 @@ body{
             text-decoration: none;
             cursor: pointer;
         }
+
+
+.tags{
+    color: #F2E205;
+    font-weight: bold;
+}
+
+.tamanho{
+    font-size: 35px;
+}

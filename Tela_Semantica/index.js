@@ -5,6 +5,8 @@ const main = document.getElementById("main");
 const nav = document.getElementById("nav");
 const btn2 = document.getElementById("btn2");
 const parte5 = document.getElementById("parte-5");
+const modal = document.getElementById("modal")
+const modalError = document.getElementById("modalError")
 
 function getNewPosition(zone, posY) {
     const cards = zone.querySelectorAll(".item:not(.dragging)");
@@ -52,7 +54,7 @@ function getNewPosition(zone, posY) {
           main.textContent.trim() &&
           nav.textContent.trim()
         ) {
-          btn2.style.background = "#F2E205";
+          btn2.style.background = "green";
           btn2.onclick = function () {
             verifica2();
           };
@@ -117,12 +119,19 @@ function getNewPosition(zone, posY) {
     console.log("Lista: " + lista.length);
     if (lista.length == 4) {
       console.log("Deu bom");
-      window.alert("Você conseguiu!!!");
+      modal.classList.remove("invisivel")
+      modal.classList.add("overlay")
       btn2.style.background = "green";
       btn2.classList.remove("button");
       btn2.classList.add("invisivel");
       lista = [];
     } else {
-      window.alert("Perdeuuuu, tente dnv");
-    }
+      modalError.classList.remove("invisivel")
+      modalError.classList.add("overlay")      }
+  }
+
+
+  function fechaModal(){
+    modalError.classList.add("invisivel")
+    modalError.classList.remove("overlay")   
   }

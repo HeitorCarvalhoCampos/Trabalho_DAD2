@@ -4,6 +4,8 @@ const html = document.getElementById("html");
 const head = document.getElementById("head");
 const doc = document.getElementById("doc");
 const btn = document.getElementById("btn");
+const modal = document.getElementById("modal")
+const modalError = document.getElementById("modalError")
 
 function getNewPosition(zone, posY) {
     const cards = zone.querySelectorAll(".item:not(.dragging)");
@@ -51,7 +53,7 @@ function getNewPosition(zone, posY) {
           doc.textContent.trim() &&
           head.textContent.trim()
         ) {
-          btn.style.background = "#F2E205";
+          btn.style.background = "green";
           btn.onclick = function () {
             verifica();
           };
@@ -132,7 +134,8 @@ function getNewPosition(zone, posY) {
     console.log("Lista: " + lista.length);
     if (lista.length == 4) {
       console.log("Deu bom");
-      window.alert("Vencemo");
+      modal.classList.remove("invisivel")
+      modal.classList.add("overlay")
       btn.style.background = "green";
       btn.classList.remove("button");
       btn.classList.add("invisivel");
@@ -143,6 +146,12 @@ function getNewPosition(zone, posY) {
       btn.onclick = null;
       lista = [];
     } else {
-      window.alert("Perdeuuuu, tente dnv");
-    }
+      modalError.classList.remove("invisivel")
+      modalError.classList.add("overlay")   
+     }
+  }
+
+  function fechaModal(){
+    modalError.classList.add("invisivel")
+    modalError.classList.remove("overlay")   
   }

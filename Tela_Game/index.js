@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
         doc.textContent.trim() &&
         head.textContent.trim()
       ) {
-        btn.style.background = "#F2E205";
+        btn.style.background = "green";
         btn.onclick = function () {
           verifica();
         };

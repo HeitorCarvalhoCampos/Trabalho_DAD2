@@ -15,6 +15,11 @@ const parte1 = document.getElementById("parte-1");
 const parte3 = document.getElementById("parte3");
 const exitLink = document.getElementById("exit");
 const enunciado = document.getElementById("enunciado");
+const enunciado2 = document.getElementById("enunciado2");
+const modalEnunciado = document.getElementById("modalEnunciado")
+const modal = document.getElementById("modal")
+const modalError = document.getElementById("modalError")
+
 // Função para obter os parâmetros da query string
 function getQueryParams() {
   const params = {};
@@ -31,17 +36,38 @@ const queryParams = getQueryParams();
 const param = queryParams.param;
 
 if (param == 1) {
-  enunciado.textContent = "Crie 3 tags de texto, as tags devem ser diferentes.";
+  enunciado.textContent = "Das tags de texto que você aprendeu, crie 3 delas para o seu site, as tags não podem se repetir em!";
+  enunciado2.textContent = "Das tags de texto que você aprendeu, crie 3 delas para o seu site, as tags não podem se repetir em!"
   enunciado.classList.add("p");
+  modalEnunciado.classList.remove("invisivel")
+  modalEnunciado.classList.add("overlay")
 } else if (param == 2) {
-  enunciado.textContent = "Crie um link.";
+  enunciado.textContent = "Agora você deve criar um link para o seu site, e definir qual será a url que ele irá abrir.";
+  enunciado2.textContent = "Agora você deve criar um link para o seu site, e definir qual será a url que ele irá abrir."
   enunciado.classList.add("p");
+  modalEnunciado.classList.remove("invisivel")
+  modalEnunciado.classList.add("overlay")
 } else if (param == 3) {
-  enunciado.textContent = "Crie uma imagem";
+  enunciado.textContent = "Agora você deverá criar uma imagem para o seu site!";
+  enunciado2.textContent = "Agora você deverá criar uma imagem para o seu site!"
   enunciado.classList.add("p");
+  modalEnunciado.classList.remove("invisivel")
+  modalEnunciado.classList.add("overlay")
 } else if (param == 4) {
-  enunciado.textContent = "Crie uma lista ordenada e uma lista não ordenada. ";
+  enunciado.textContent = "Agora você deverá criar duas listas para o seu site, uma ordenada, e uma não ordenada.";
+  enunciado2.textContent = "Agora você deverá criar duas listas para o seu site, uma ordenada, e uma não ordenada."
   enunciado.classList.add("p");
+  modalEnunciado.classList.remove("invisivel")
+  modalEnunciado.classList.add("overlay")}
+
+function fechaModal(){
+  modalEnunciado.classList.add("invisivel")
+  modalEnunciado.classList.remove("overlay")   
+}
+
+function fechaModalError(){
+  modalError.classList.add("invisivel")
+  modalError.classList.remove("overlay")   
 }
 
 //fase 4
@@ -68,7 +94,8 @@ function verificaFase4() {
       window.alert("Você deve criar uma lista!!!");
     }
   } else {
-    window.alert("Você conseguiu!!!");
+    modal.classList.remove("invisivel")
+    modal.classList.add("overlay")
     complementary_tag.classList.add("invisivel");
     complementary_tag.classList.remove("input");
     btn_send.classList.remove("button");
@@ -100,7 +127,8 @@ function enviarValuefase4(){
     btn_send.onclick = function () {
       enviarTag();
     };
-    window.alert("Você conseguiu!!!")
+    modal.classList.remove("invisivel")
+    modal.classList.add("overlay")
     input.classList.remove("input")
     input.classList.add("invisivel")
     btn_send.classList.add("invisivel")
@@ -169,8 +197,8 @@ function verificaFase3() {
       window.alert("Você deve criar uma imagem!!!");
     }
   } else {
-    window.alert("Você conseguiu!!!");
-  }
+    modal.classList.remove("invisivel")
+    modal.classList.add("overlay")  }
 }
 
 function enviarValuefase3() {
@@ -206,8 +234,8 @@ function enviarValuefase3() {
       value_tag.classList.remove("input");
       input.value = "";
       value_tag.value = "";
-      window.alert("Você conseguiu!!!");
-    }
+      modal.classList.remove("invisivel")
+      modal.classList.add("overlay")    }
   }
 }
 
@@ -241,8 +269,8 @@ function verificaFase2() {
       window.alert("Você deve criar uma link!!!");
     }
   } else {
-    window.alert("Você conseguiu!!!");
-  }
+    modal.classList.remove("invisivel")
+    modal.classList.add("overlay")  }
 }
 
 function enviarValuefase2() {
@@ -266,8 +294,8 @@ function enviarValuefase2() {
       exitLink.parentElement.href = "../Tela_Home/tela_home.html#nav";
       input.value = "";
       value_tag.value = "";
-      window.alert("Você conseguiu!!!");
-    }
+      modal.classList.remove("invisivel")
+      modal.classList.add("overlay")    }
   } else {
     window.alert("Algo deu errado!");
   }
@@ -302,8 +330,8 @@ function verificaFase1() {
       window.alert("Você deve criar tags de texto!!!");
     }
   } else {
-    window.alert("Você conseguiu!!!");
-  }
+    modal.classList.remove("invisivel")
+    modal.classList.add("overlay")  }
 }
 
 function enviarValuefase1() {
@@ -317,7 +345,8 @@ function enviarValuefase1() {
       btn_send.onclick = function () {
         enviarTag();
       };
-      window.alert("Você conseguiu!!!");
+      modal.classList.remove("invisivel")
+      modal.classList.add("overlay")
       input.classList.remove("input");
       input.classList.add("invisivel");
       btn_send.classList.remove("button");

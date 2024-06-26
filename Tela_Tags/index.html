@@ -10,8 +10,10 @@
     <title>Tags</title>
 </head>
 <body>
+  <div id="container">
   <a href="../Tela_Home/tela_home.html#semantica"><img src="../assets/exit.svg" alt="sair" id="exit"/></a>
     <pre id="enunciado"></pre>
+  </div>
     <div id="parte3" class="parte-3">
         <div id="criando">
           <input
@@ -28,10 +30,33 @@
             id="value-input2"
             placeholder="Digite a tag que pertence a tag acima:"
           />
-          <input type="file" name="tags" class="invisivel" id="value-input" />
-          <div id="send">Enviar</div>
+          <input type="file" name="tags" class="invisivel" id="value-input"             placeholder="Digite o valor da tag acima:"
+          />
+          <div id="send">Enviar</div> 
         </div>
         <div id="site"></div>
       </div>
+
+      <div class="invisivel" id="modal">
+        <div class="modal">
+            <h1>Parabéns, você conseguiu!!!</h1>
+            <a href="../Tela_Home/tela_home.html#semantica" class="sairPag">Continuar</a>
+        </div>
+    </div>
+
+    <div class="invisivel" id="modalEnunciado">
+      <div class="modal">
+          <h1>Hora de praticar!</h1>
+          <h2 id="enunciado2"></h2>
+          <a href="#" class="sairPag" onclick="fechaModal()">Continuar</a>
+      </div>
+  </div>
+
+    <div class="invisivel" id="modalError">
+      <div class="modal">
+          <h1>Que pena, você quase conseguiu!</h1>
+          <a href="#" class="sairPag2" onclick="fechaModalError()">Tentar novamente</a>
+      </div>
+  </div>
 </body>
 </html>
