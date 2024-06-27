@@ -81,7 +81,7 @@ function getNewPosition(zone, posY) {
             main.textContent.trim() &&
             nav.textContent.trim()
           ) {
-            btn2.style.background = "red";
+            btn2.style.background = "green";
             btn2.onclick = function () {
               verifica2();
             };
